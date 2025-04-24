@@ -1,0 +1,78 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-stock-official-3840x2400-5630.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.window {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.2s;
+    min-width: 300px;
+    min-height: 200px;
+    resize: both;
+    z-index: 10;
+}
+
+.window-header {
+    cursor: move;
+    user-select: none;
+}
+
+.window.active {
+    z-index: 100;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.taskbar-icon {
+    transition: all 0.2s;
+}
+
+.taskbar-icon:hover {
+    transform: scale(1.1);
+}
+
+.taskbar-icon.active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.start-menu {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.desktop-icon {
+    transition: all 0.2s;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.context-menu {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
